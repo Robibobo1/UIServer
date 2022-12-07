@@ -1,10 +1,14 @@
 package ch.hevs.synd.sin.network.server;
 
+import ch.hevs.synd.sin.sensor.MeasurementType;
 import ch.hevs.synd.sin.sensor.Sensor;
+import ch.hevs.utils.Utility;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+
+
 
 public class Transaction {
 
@@ -40,21 +44,33 @@ public class Transaction {
     /* Public methods                                                                                                   */
     /*                                                                                                                  */
     /* **************************************************************************************************************** */
-    public boolean processTransaction() {
-        // TODO: Put your code here...
-        return false;
-    }
-
-
-    /* **************************************************************************************************************** */
-    /*                                                                                                                  */
-    /* Private methods                                                                                                  */
-    /*                                                                                                                  */
-    /* **************************************************************************************************************** */
-    // Private method which will interpret the given command and react in to it...
-    private boolean transaction(String dataIn) throws IOException {
-        // TODO: Analyze here the given action (dataIn) and react in to it by sending the correct reply to the output stream
-        return false;
+    public boolean processTransaction() throws IOException {
+        String rxData = new String(Utility.readLine(_in));
+        if(rxData.equalsIgnoreCase("getu"))
+        {
+            double vValue = _uSensor.getMeasurement().getValue();
+            _out.write(Double.toString(vValue).getBytes());
+            _out.write('\n');
+            return true;
+        }
+        else if(rxData.equalsIgnoreCase("geti"))
+        {
+            double iValue = _iSensor.getMeasurement().getValue();
+            _out.write(Double.toString(iValue).getBytes());
+            _out.write('\n');
+            return true;
+        }
+        else if(rxData.equalsIgnoreCase("stop"))
+        {
+            _uSensor.shutdown();
+            _iSensor.shutdown();
+            return false;
+        }
+        else
+        {
+            _out.write("Not a valid command\n".getBytes());
+            return true;
+        }
     }
 
 
@@ -64,6 +80,20 @@ public class Transaction {
     /*                                                                                                                  */
     /* **************************************************************************************************************** */
     public static void main(String[] args) {
-        // TODO: Put your code here
+        Sensor sU = new Sensor(MeasurementType.Voltage,0);
+        Sensor sI = new Sensor(MeasurementType.Current,10);
+        try{
+
+            InputStream iS = System.in;
+            OutputStream oS = System.out;
+            Transaction t = new Transaction(iS,oS,sU,sI);
+            while(t.processTransaction());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Server can not be reached");
+            System.exit(-1);
+        }
+        System.exit(200);
     }
 }

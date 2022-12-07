@@ -8,12 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="028e861c-982b-48af-abd9-036e0fbebabe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/datagram/UIClientUdp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stream/ConnectionHandler1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stream/UIClientTCP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/stream/UIServer1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/ch/hevs/synd/sin/utils/Utility.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/ch/hevs/synd/sin/utils/Utility.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/hevs/synd/sin/sensor/Measurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/hevs/synd/sin/sensor/Measurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/hevs/synd/sin/sensor/Sensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/hevs/synd/sin/sensor/Sensor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ch/hevs/synd/sin/utils/Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/hevs/utils/Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ch/hevs/synd/sin/network/server/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ch/hevs/synd/sin/network/server/Transaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +39,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/robin/Desktop/Workspace code/UIServer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
@@ -81,6 +83,9 @@
       <workItem from="1639405417997" duration="375000" />
       <workItem from="1639476893616" duration="41000" />
       <workItem from="1639648924592" duration="247000" />
+      <workItem from="1670246468188" duration="522000" />
+      <workItem from="1670413372408" duration="545000" />
+      <workItem from="1670413928418" duration="11723000" />
     </task>
     <servers />
   </component>
@@ -97,5 +102,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
